@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="encriptador-style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+	<title>Encriptador de Texto</title>
+</head>
+<body>
+	<header>
+		<h1 class="titulo">ENCRIPTADOR DE TEXTO</h1>
+	</header>
+    <div>
+        <textarea cols="150" rows="10" class="textoColocado" required placeholder="Escriba Texto (solo letras minusculas y sin acentos)" ></textarea >
+        <br>
+    </div>
+     
+    <div>
+       <button type="submit" class="encriptar" onclick="btnEncriptar()"> Encriptar </button>
+       <button type="submit" class="desencriptar" onclick="btnDesencriptar()"> Desencriptar </button>
+       <br>
+    </div>
+
+    <div>
+       <textarea cols="150" rows="10" class="textoResultado"></textarea >
+       <br>
+    </div>
+    <div>
+       <button type="submit" class="copiar-texto" onclick="copiar()"> COPIAR </button>
+       <br>
+    </div>
+
+    <footer>
+    	<foot>Created by: Miguel Ramirez</foot>
+    </footer>
+<script src="Script.js"></script>
+</body>
+</html>
+

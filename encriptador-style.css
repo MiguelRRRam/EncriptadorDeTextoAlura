@@ -88,4 +88,9 @@ foot{
 	header, footer{
 		width: auto;
 	}
+	
+	.ejecutores{
+		display: flex;
+	}
+	
 }

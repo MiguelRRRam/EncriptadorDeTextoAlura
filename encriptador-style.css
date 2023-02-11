@@ -29,6 +29,21 @@ background-attachment: fixed;
 background-size: cover;
 }
 
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #333;
+    animation: shine 0.5s forwards;
+  }
+
+  @keyframes shine {
+    0% {
+      box-shadow: 0 0 5px #999;
+    }
+    100% {
+      box-shadow: 0 0 20px rgb(0, 81, 255);
+    }
+  }
+
 button{
 	width: 40%;
 	padding: 15px 0;

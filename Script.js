@@ -26,7 +26,7 @@ function btnDesencriptar(){
 };
 
 function desencriptar(stringDesencriptado){
-    let matrizCodigo = [["enter,", ""], ["ines", "i"], ["ai", "a"], ["ober", "o"], ["ufat", "u"]];
+    let matrizCodigo = [["enter,", "e"], ["ines", "i"], ["ai", "a"], ["ober", "o"], ["ufat", "u"]];
     stringDesencriptado = stringDesencriptado;
 
     for(let i = 0 ; i < matrizCodigo.length; i ++){

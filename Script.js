@@ -26,7 +26,7 @@ function btnDesencriptar(){
 };
 
 function desencriptar(stringDesencriptado){
-    let matrizCodigo = [["enter,", "e"], ["ines", "i"], ["ai", "a"], ["ober", "o"], ["ufat", "u"]];
+    let matrizCodigo = [["enter", "e"], ["ines", "i"], ["ai", "a"], ["ober", "o"], ["ufat", "u"]];
     stringDesencriptado = stringDesencriptado;
 
     for(let i = 0 ; i < matrizCodigo.length; i ++){
@@ -43,3 +43,37 @@ function copiarTexto() {
     textoAcopiar.select(); 
     document.execCommand("copy");
  };
+
+ if ('webkitSpeechRecognition' in window) {
+    const reconocimiento = new webkitSpeechRecognition();
+    reconocimiento.continuous = true;
+    reconocimiento.interimResults = true;
+    reconocimiento.lang = 'es-ES';
+  
+    let frasesReconocidas = [];
+  
+    reconocimiento.onresult = function(event) {
+        let texto = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          texto += event.results[i][0].transcript;
+        }
+        const textoNormalizado = texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      
+        if (!frasesReconocidas.includes(textoNormalizado)) {
+          textArea.value = '';
+          textArea.value = textoNormalizado;
+          frasesReconocidas.push(textoNormalizado);
+        }
+      };
+      
+  
+    document.getElementById('btn-escuchar').addEventListener('click', function() {
+      reconocimiento.start();
+    });
+    
+    document.getElementById('btn-stopEscuchar').addEventListener('click', function(){
+      reconocimiento.stop();
+    });
+  };
+
+    

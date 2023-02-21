@@ -14,14 +14,20 @@
 	<header>
 		<h1 class="titulo">ENCRIPTADOR DE TEXTO</h1>
 	</header>
-    <div>
-        <textarea cols="150" rows="10" class="textoColocado" required placeholder="Escriba Texto (solo letras minusculas y sin acentos)" ></textarea >
+    <div class="espacio-de-escritura">
+        <section>
+            <textarea cols="150" rows="10" class="textoColocado" required placeholder="Escriba Texto (solo letras minusculas y sin acentos)" ></textarea >
+        </section>
+        <section class="botones-escuchar">
+            <button type="submit" id="btn-escuchar" class="escuchar1">Escribe por voz</button>
+            <button type="submit" id="btn-stopEscuchar" class="escuchar2">Detener</button>
+        </section>
         <br>
     </div>
      
     <div class="ejecutores">
-       <button type="submit" class="encriptar" onclick="btnEncriptar()"> Encriptar </button>
-       <button type="submit" class="desencriptar" onclick="btnDesencriptar()"> Desencriptar </button>
+       <button type="submit" class="encriptar" id="ejec" onclick="btnEncriptar()"> Encriptar </button>
+       <button type="submit" class="desencriptar" id="ejec" onclick="btnDesencriptar()"> Desencriptar </button>
        <br>
     </div>
 
@@ -30,7 +36,7 @@
        <br>
     </div>
     <div>
-       <button type="submit" class="copiar-texto" onclick="copiarTexto()"> COPIAR </button>
+       <button type="submit" class="copiar-texto" id="ejec" onclick="copiarTexto()"> COPIAR </button>
        <br>
     </div>
 
